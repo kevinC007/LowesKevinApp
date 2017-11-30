@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:text="Shopping Cart"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#d9d9d9"
+            android:text="REMOVE ALL"
+            android:textAllCaps="false"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="244dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="388dp"
+            android:layout_height="450dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/btnCheckout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="CHECK OUT"
+            android:textColor="#000"
+            android:background="#d9d9d9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="244dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_shopping_cart_3x"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintStart_toEndOf="@+id/title"
+            app:layout_constraintTop_toTopOf="@+id/title"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="140dp" />
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Empty Cart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnCheckout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView"
+            app:layout_constraintVertical_bias="0.02"
+            tools:layout_editor_absoluteX="133dp" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnCheckout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

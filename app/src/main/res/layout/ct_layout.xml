@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/card_view"
+        android:layout_weight="1.33">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="130dp"
+                android:layout_height="146dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@mipmap/ic_launcher"
+                app:layout_constraintRight_toLeftOf="@+id/tvDescription"
+                android:layout_marginRight="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="61dp" />
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="481dp"
+                android:layout_height="33dp"
+                android:text="TextView"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCart"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="213dp"
+                android:layout_height="141dp"
+                android:layout_marginStart="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/ivCart"
+                app:layout_constraintTop_toTopOf="@+id/tvHeading"
+                android:layout_marginTop="57dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
